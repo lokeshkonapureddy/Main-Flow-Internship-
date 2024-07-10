@@ -1,0 +1,41 @@
+1.Exploratory data analysis in machine learning using python.
+Aim: To Explore data analysis in machine learning using python.
+Program:
+1.Importing Required Libraries
+# importting Libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import warnings as wr
+wr.filterwarnings('ignore')
+2.Reading Dataset
+# loading and reading dataset
+df = pd.read_csv("winequality-red.csv")
+print(df.head())
+3.Analyzing the Data
+# shape of the data
+df.shape
+4.About data types
+#data information 
+df.info()
+5.Description of the data
+# describing the data
+df.describe()
+6.Checking Columns
+#column to list 
+df.columns.tolist()
+7.Checking Missing Values
+# check for missing values:
+df.isnull().sum()
+8.Checking for the duplicate values
+#checking duplicate values 
+df.nunique()
+9.Box Plot
+#plotting box plot between alcohol and quality
+sns.boxplot(x='quality', y='alcohol', data=df)
+10. Histogram 
+df.alcohol.hist(bins=25)
+or
+plt.hist(df.density,bins=3)
+
